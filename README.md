@@ -8,10 +8,13 @@ To write a program to predict the profit of a city using the linear regression m
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1. 
-2. 
-3. 
-4. 
+1. Data Loading and Preprocessing
+2. Extract Features and Target Variable:
+3. using StandardScaler. This ensures that the features have zero mean and unit variance, which helps gradient descent converge faster.
+4. Implementing Linear Regression with Gradient Descent
+5. Initialize the model parameters (weights) theta to zeros. The size of theta will match the number of features (including the intercept term).
+6. Set the learning rate (step size for updates) and the number of iterations for the gradient descent process.
+7. After the gradient descent converges (i.e., the specified number of iterations is completed), return the final optimized values of theta.
 
 ## Program:
 ```
@@ -19,7 +22,8 @@ To write a program to predict the profit of a city using the linear regression m
 Program to implement the linear regression using gradient descent.
 Developed by: M.Mahalakshmi
 RegisterNumber:24900868  
-*/
+```
+```
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
@@ -46,11 +50,13 @@ new_Scaled=scaler.fit_transform(new_data)
 prediction=np.dot(np.append(1, new_Scaled),theta)
 prediction=prediction.reshape(-1,1)
 pre=scaler.inverse_transform(prediction)
-print(f"Predicted value: {pre}")```
+print(f"Predicted value: {pre}")
+```
 
 ## Output:
 
-![Screenshot 2024-11-17 165133](https://github.com/user-attachments/assets/7e64f603-2f06-4f6d-9f77-3f40e589a4c0)
+![Screenshot 2024-11-17 165133](https://github.com/user-attachments/assets/ccc6d09b-a53d-4864-aec1-84e45f9fcac7)
+
  
 
 ## Result:
